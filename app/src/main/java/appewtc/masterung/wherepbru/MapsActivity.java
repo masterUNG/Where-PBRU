@@ -52,7 +52,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions()
         .position(latLng)
         .icon(BitmapDescriptorFactory
-        .fromResource(iconInts[Integer.parseInt(resultStrings[5])])));
+        .fromResource(iconInts[Integer.parseInt(resultStrings[5])]))
+        .title("ห้อง " + resultStrings[2])
+        .snippet("อยู่ที่ อาคาร " + resultStrings[1]));
 
     }   // setupCenter
 
