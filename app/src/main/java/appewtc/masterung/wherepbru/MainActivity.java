@@ -1,12 +1,14 @@
 package appewtc.masterung.wherepbru;
 
 import android.database.sqlite.SQLiteDatabase;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
     private MyManage myManage;
+    private String urlJSON = "http://swiftcodingthai.com/pbru/get_room.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,23 @@ public class MainActivity extends AppCompatActivity {
         deleteAllSQLite();
 
     }   // Main Method
+
+    public class SynRoom extends AsyncTask<Void, Void, String> {
+
+        @Override
+        protected String doInBackground(Void... voids) {
+
+            try {
+
+            } catch (Exception e) {
+                return null;
+            }
+
+            return null;
+        }   // doInBack
+
+    }   // SynRoom Class
+
 
     private void deleteAllSQLite() {
 
