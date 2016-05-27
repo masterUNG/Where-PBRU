@@ -2,6 +2,7 @@ package appewtc.masterung.wherepbru;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
@@ -96,6 +97,11 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton("Go", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+
+                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+                intent.putExtra("Result", resultStrings);
+                startActivity(intent);
+
                 dialogInterface.dismiss();
             }
         });
